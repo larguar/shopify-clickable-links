@@ -15,19 +15,19 @@ The Shopify Combine theme[^1] has a really great mega menu feature that I was ex
 
 :file_folder: **sections/header.liquid**
 
-Search for `{%- when 'mega-menu' -%}` (there should be two in the file) and add to each `{%- render -%}`:
+Search for `{%- when 'mega-menu' -%}`[^2] and add to `{%- render -%}`:
 ```
 id: block.id,
 ```
 
 :file_folder: **snippets/site-nav-mega.liquid**
 
-Search for `<a class="menu-link {{ links_weight }}"` and add before classes in `<span>`:
+Search for `<a class="menu-link {{ links_weight }}"` and add before classes in `<span>`[^3]:
 ```
 id="{{ id }}"
 ```
 
-:file_folder: **assets/script.js.liquid**[^2]
+:file_folder: **assets/script.js.liquid**[^4]
 
 Add this code anywhere in your custom script file. Use browser Inspector to find the new `<a class="menu-link">` ID for each menu menu navigation link (regular and sticky menu) and update ID names and `window.location.href` paths for each `document.getElementById()`:
 ```
@@ -64,4 +64,6 @@ Appreciate this code? Say thanks with a coffee:
 
 ## Notes
 [^1]: This code is specific to the [Combine](https://themes.shopify.com/themes/combine/styles/objects) theme in Shopify, but should work for other themes with some adjustments. File names will likely be different across themes.
-[^2]: This is the file I created for my shop's custom JavaScript. If you have your own file already created, you can add this snippet to that file. If you need to create a new file, just make sure you link to it in your `layout/theme.liquid` file and that it's a `.js.liquid` file (not just `.js`).
+[^2]: There should be two instances in the file. Add code to both.
+[^3]: There are a few `<span>`'s. Add to the `<span>` code specifically for the link.
+[^4]: This is the file I created for my shop's custom JavaScript. If you have your own file already created, you can add this snippet to that file. If you need to create a new file, just make sure you link to it in your `layout/theme.liquid` file and that it's a `.js.liquid` file (not just `.js`).
