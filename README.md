@@ -15,14 +15,14 @@ The Shopify Combine theme[^1] has a really great mega menu feature that I was ex
 
 :file_folder: **sections/header.liquid**
 
-Search for `{%- when 'mega-menu' -%}` and add to render:
+Search for `{%- when 'mega-menu' -%}` (there should be two in the file) and add to each `{%- render -%}`:
 ```
 id: block.id,
 ```
 
 :file_folder: **snippets/site-nav-mega.liquid**
 
-Search for `<a class="menu-link {{ links_weight }}"` and add before classes:
+Search for `<a class="menu-link {{ links_weight }}"` and add before classes in `<span>`:
 ```
 id="{{ id }}"
 ```
