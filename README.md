@@ -1,7 +1,7 @@
 # Shopify Clickable Mega Menu Links
 The Shopify Combine theme[^1] has a really great mega menu feature that I was excited to use for our website, but the functionality wasn't fully what I needed. By default, the mega menu appears when you hover over the designated link in the main menu, but that main menu 'link' doesn't actually function as a link. While the mega menu has additional links for a user to click through to if they so choose, I needed the main 'link' to still function as a link when clicked. This code allows for both the click and hover to occur, bettering the user experience.
 
-![JavaScript Badge](https://img.shields.io/badge/-JavaScript-539436) ![Shopify Liquid Badge](https://img.shields.io/badge/-Shopify%20Liquid-750460)   
+![HTML Badge](https://img.shields.io/badge/-HTML-323795) ![JavaScript Badge](https://img.shields.io/badge/-JavaScript-539436) ![Shopify Liquid Badge](https://img.shields.io/badge/-Shopify%20Liquid-750460)   
 
 
 ## Table of Contents 
