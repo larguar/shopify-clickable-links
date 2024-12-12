@@ -31,21 +31,18 @@ id="{{ id }}"
 
 Add this code anywhere in your custom script file. Use browser Inspector to find the new `<a class="menu-link">` ID for each menu menu navigation link (regular and sticky menu) and update ID names and `window.location.href` paths for each `document.getElementById()`:
 ```
-{% comment %} Clickable Mega Menu Links {% endcomment %}
-document.getElementById("mega_menu_6t4AGw").onclick = function() {
-  window.location.href = "/collections/pins";
-};
-document.getElementById("mega_menu_7Cnq9A").onclick = function() {
-  window.location.href = "/collections/extras";
-};
+{% comment %} [LG] Clickable Mega Menu Links {% endcomment %}
+let pinsID = "mega_menu_6t4AGw";
+let extrasID = "mega_menu_7Cnq9A";
+let pinsURL = "/collections/pins";
+let extrasURL = "/collections/extras";
+document.getElementById(pinsID).onclick = () => window.location.href = pinsURL;
+document.getElementById(extrasID).onclick = () => window.location.href = extrasURL;
 setTimeout(() => {
-  document.getElementById("mega_menu_6t4AGw-sticky").onclick = function() {
-    window.location.href = "/collections/pins";
-  };
-  document.getElementById("mega_menu_7Cnq9A-sticky").onclick = function() {
-    window.location.href = "/collections/extras";
-  };
+  document.getElementById(pinsID + "-sticky").onclick = () => window.location.href = pinsURL;
+  document.getElementById(extrasID + "-sticky").onclick = () => window.location.href = extrasURL;
 }, 0.1);
+{% comment %} [LG] End Clickable Mega Menu Links {% endcomment %}
 ```
 
 
